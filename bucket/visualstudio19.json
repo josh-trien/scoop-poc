@@ -1,5 +1,5 @@
 {
-    "version": "17.8.2",
+    "version": "16.11.32",
     "homepage": "https://visualstudio.microsoft.com",
     "description": "The community edition of the comprehensive and feature-packed IDE for .NET and C/C++ developers.",
     "license": {
@@ -64,8 +64,5 @@
             "Write-Output \"$version $response\""
         ],
         "regex": "([\\d.]+)\\s/download/pr/(?<Uuid>[\\w-]+)/(?<Hash>[\\w]+)/"
-    },
-    "autoupdate": {
-        "url": "https://download.visualstudio.microsoft.com/download/pr/$matchUuid/$matchHash/vs_Community.exe"
     }
 }
