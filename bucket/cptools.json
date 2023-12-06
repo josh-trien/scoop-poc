@@ -3,20 +3,14 @@
     "description": "Installs necessary tools for developing on Capital Platforms",
     "homepage": "https://trienpont.atlassian.net/wiki/spaces/CP/overview",
     "license": "N/a",
-    "architecture": {
-        "64bit": {
-        }
-    },
-    "installer": {
-        "script": [
-            "scoop install scoop-poc/dbeaver",
-            "scoop install scoop-poc/filezilla",
-            "scoop install scoop-poc/git",
-            "scoop install scoop-poc/github",
-            "scoop install scoop-poc/nodejs16",
-            "scoop install scoop-poc/sqlserver",
-            "scoop install scoop-poc/visualstudio19",
-            "scoop install scoop-poc/visualstudio22"
-        ]
-    }
+    "depends": [
+        "scoop-poc/dbeaver",
+        "scoop-poc/filezilla",
+        "scoop-poc/git",
+        "scoop-poc/github",
+        "scoop-poc/nodejs16",
+        "scoop-poc/sqlserver",
+        "scoop-poc/visualstudio19",
+        "scoop-poc/visualstudio22"
+    ]
 }
