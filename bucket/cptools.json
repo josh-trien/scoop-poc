@@ -3,6 +3,10 @@
     "description": "Installs necessary tools for developing on Capital Platforms",
     "homepage": "https://trienpont.atlassian.net/wiki/spaces/CP/overview",
     "license": "N/a",
+    "architecture": {
+        "64bit": {
+        }
+    },
     "installer": {
         "script": [
             "scoop install scoop-poc/dbeaver",
