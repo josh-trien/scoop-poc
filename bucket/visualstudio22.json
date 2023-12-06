@@ -10,7 +10,7 @@
     "hash": "51d8dc03605a4fa11d445795cb1cc7ea1a518b0b0ce466cdaa805fc6029d7058",
     "homepage": "https://visualstudio.microsoft.com/",
     "installer": {
-      "script": "Install-Module -Name VSSetup -Scope CurrentUser; Add-VisualStudioWorkload -PackageName 'visualstudio2022-workload-nativedesktop' -Workload 'NativeDesktop' -VisualStudioYear '2022' -Preview $false    -ApplicableProducts @('Community', 'Professional', 'Enterprise') -IncludeRecommendedComponentsByDefault"
+      "script": "Add-VisualStudioWorkload -PackageName 'visualstudio2022-workload-nativedesktop' -Workload 'NativeDesktop' -VisualStudioYear '2022' -Preview $false    -ApplicableProducts @('Community', 'Professional', 'Enterprise') -IncludeRecommendedComponentsByDefault"
     },
     "license": "https://visualstudio.microsoft.com/license-terms/",
     "url": "https://aka.ms/vs/17/release/vs_community.exe",
