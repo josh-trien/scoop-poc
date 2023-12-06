@@ -21,7 +21,7 @@
             "    Start-Process \"$dir\\vs_Community.exe\" -Wait -Verb 'RunAs' `",
             "      -Args @('update', '--installPath',  \"`\"$installDir`\"\", '-q', '--norestart', '--wait')",
             "}",
-            "else { Start-Process \"$dir\\vs_Community.exe\" -Wait -Verb 'RunAs' -Args @('-q', '--norestart', '--wait') }",
+            "else { Start-Process \"$dir\\vs_Community.exe\" -Wait -Verb 'RunAs' -Args @('-q', '--norestart', '--wait', '--add', 'Microsoft.VisualStudio.Workload.ManagedDesktop', '--add', 'Microsoft.VisualStudio.Workload.NetWeb') }",
             "Start-Sleep -Seconds 2; Remove-Item \"$dir\\vs_Community.exe\""
         ]
     },
@@ -31,7 +31,7 @@
             "if ($cmd -eq 'uninstall') {",
             "    $setupFile = \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio\\Installer\\setup.exe\"",
             "    $installDir = (Get-ChildItem \"$env:ProgramFiles\\Microsoft Visual Studio\" -Filter 'Community' -Recurse).FullName",
-            "    Start-Process $setupFile -Wait -Verb 'RunAs' -Args @('uninstall', '--installPath', \"`\"$installDir`\"\", '-q', '--norestart',  '--add Microsoft.VisualStudio.Workload.ManagedDesktop', '--add Microsoft.VisualStudio.Workload.NetWeb')",
+            "    Start-Process $setupFile -Wait -Verb 'RunAs' -Args @('uninstall', '--installPath', \"`\"$installDir`\"\", '-q', '--norestart')",
             "    Start-Sleep -Seconds 2; Start-Process $setupFile -Wait -Verb 'RunAs' -Args @('/uninstall', '-q')",
             "    if ($purge) { ",
             "        foreach ($i in @(\"$env:ProgramFiles\\Microsoft Visual Studio\",",
