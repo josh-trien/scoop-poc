@@ -17,7 +17,7 @@
         "script": [
             "if (!(is_admin)) { error \"Admin privileges are required to $cmd $app\"; break }",
             "if ($cmd -eq 'update') {",
-            "    $installDir = (Get-ChildItem \"$env:ProgramFiles\\Microsoft Visual Studio\" -Filter 'Community' -Recurse).FullName",
+            "    $installDir = (Get-ChildItem \"$env:ProgramFiles\\Microsoft Visual Studio 19\" -Filter 'Community' -Recurse).FullName",
             "    Start-Process \"$dir\\vs_Community.exe\" -Wait -Verb 'RunAs' `",
             "      -Args @('update', '--installPath',  \"`\"$installDir`\"\", '-q', '--norestart', '--wait')",
             "}",
@@ -29,12 +29,12 @@
         "script": [
             "if (!(is_admin)) { error \"Admin privileges are required to $cmd $app\"; break }",
             "if ($cmd -eq 'uninstall') {",
-            "    $setupFile = \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio\\Installer\\setup.exe\"",
-            "    $installDir = (Get-ChildItem \"$env:ProgramFiles\\Microsoft Visual Studio\" -Filter 'Community' -Recurse).FullName",
+            "    $setupFile = \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio 19\\Installer\\setup.exe\"",
+            "    $installDir = (Get-ChildItem \"$env:ProgramFiles\\Microsoft Visual Studio 19\" -Filter 'Community' -Recurse).FullName",
             "    Start-Process $setupFile -Wait -Verb 'RunAs' -Args @('uninstall', '--installPath', \"`\"$installDir`\"\", '-q', '--norestart')",
             "    Start-Sleep -Seconds 2; Start-Process $setupFile -Wait -Verb 'RunAs' -Args @('/uninstall', '-q')",
             "    if ($purge) { ",
-            "        foreach ($i in @(\"$env:ProgramFiles\\Microsoft Visual Studio\",",
+            "        foreach ($i in @(\"$env:ProgramFiles\\Microsoft Visual Studio 19\",",
             "            \"$env:LOCALAPPDATA\\Microsoft\\VisualStudio\")) {",
             "            Remove-Item $i -Force -Recurse; Start-Sleep -Milliseconds 1500",
             "        }",
@@ -45,9 +45,9 @@
     },
     "post_uninstall": [
         "if ($cmd -eq 'uninstall') {",
-        "    if (Test-Path \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio\\Installer\\setup.exe\") {",
+        "    if (Test-Path \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio 19\\Installer\\setup.exe\") {",
         "        warn \"$app might have left some unwanted files!\"; warn \"You can uninstall the rest of $app using:\"",
-        "        Write-Host '& \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio\\Installer\\setup.exe\" /uninstall -q' -F 'Red'",
+        "        Write-Host '& \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio 19\\Installer\\setup.exe\" /uninstall -q' -F 'Red'",
         "    }",
         "    warn \"`nYou may have to restart your system after uninstalling this app for it to be completely removed!\"",
         "}"
