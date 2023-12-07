@@ -9,7 +9,7 @@
         "scoop-poc/git",
         "scoop-poc/github",
         "scoop-poc/nodejs16",
-        "scoop-poc/sqlserver",
+        "scoop-poc/smss",
         "scoop-poc/visualstudio19",
         "scoop-poc/visualstudio22"
     ]

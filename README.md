@@ -2,6 +2,20 @@
 
 Trienpont bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
 
+## List of Avaliable Apps a.k.a Manifests
+- dbeaver
+- filezilla
+- git
+- github desktop
+- nodejs16
+- nuget
+- sql server management studio (smss)
+- visual studion 2019 (visualstudio19)
+- visual studio 2022 (visualstudio22)
+
+**special**
+- cptools => Installs all required applications to develop on the Capital Platforms project
+
 ## How to install Scoop
 
 Please run the following commands:
