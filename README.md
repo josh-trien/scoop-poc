@@ -33,9 +33,6 @@ scoop install scoop-poc/<manifest name>
 
 3. Once read and understood either create your own or navigate to scoop.sh/apps and retrofit premade casks to your use case
 
-## How do I contribute new manifests?
-
-
 
 ## Hash doesn't match error?
 
