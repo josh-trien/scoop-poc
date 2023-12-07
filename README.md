@@ -1,6 +1,6 @@
 # Trienpont Bucket
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+Trienpont bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
 
 ## How to install Scoop
 
