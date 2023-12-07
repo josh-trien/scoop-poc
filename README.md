@@ -26,10 +26,10 @@ scoop install scoop-poc/<manifest name>
    `bucket/<app-name>.json`.
 2. see this resource on how to create manifests:
 
-`To make a new manifest contribution, please read the [Contributing
-Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
-and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
-wiki page.`
+    `To make a new manifest contribution, please read the [Contributing
+    Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
+    and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
+    wiki page.`
 
 3. Once read and understood either create your own or navigate to scoop.sh/apps and retrofit premade casks to your use case
 
