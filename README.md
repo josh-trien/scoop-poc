@@ -36,3 +36,15 @@ To make a new manifest contribution, please read the [Contributing
 Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
 and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
 wiki page.
+
+## Hash doesn't match error?
+
+To fix this the hash needs to updated with the new artifact hash that has been uploaed to the manifests url
+steps:
+1. Grab the url from the manifest of the tool that failed to download under bucket
+2. Access that url to download the file.+/zipped folder
+3. Run the following command in Powershell
+    `Get-FileHash <Path to downloaded File> SHA256`
+4. Take that hash output and replace the hash value within the manifest with said hash
+5. Push these changes to master
+6. Update your local bucket by running `scoop update` and rerun the install
